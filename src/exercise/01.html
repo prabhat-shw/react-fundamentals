@@ -23,12 +23,17 @@
     <title>React Fundamentals</title>
   </head>
   <body>
-    <div id="root"></div>
+    <!-- <div id="root"></div> -->
     <script type="module">
+      const root = document.createElement('div')
+      root.setAttribute('id', 'root')
       const div = document.createElement('div')
       div.textContent = 'Hello World'
-      const root = document.getElementById('root')
       root.append(div)
+      const body = document.getElementsByTagName('body')[0]
+      body.append(root)
+      // alternate solution
+      // document.body.append(root)
     </script>
   </body>
 </html>
